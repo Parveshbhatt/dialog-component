@@ -1,0 +1,42 @@
+<!--
+  Dialog box component
+-->
+<div class="rt-dialog">
+  <!--
+  background overlay of the dialog box
+-->
+  <div class="rt-dialog-background" (click)="close()"></div>
+  <!--
+  main dialog box container
+-->
+  <div class="rt-dialog-box" [style.height]="getHeight()+'px'" [style.width]="getWidth()+'px'"
+    [ngClass]="{sideDialog: getPosition()==='side'}">
+    <!--
+  Header of the dialog box
+-->
+    <div class="rt-dialog-header">
+      <!--
+  Title inside the header of the dialog box
+-->
+      <h5 class="rt-dialog-title">{{title}}</h5>
+      <!-- cross icon on the top - right of the dialog box -->
+      <button type="button" class="rt-dialog-close-icon" tabindex="0" role="button" (click)="close()"
+        data-dismiss="rt-dialog" aria-label="Close" *ngIf="getCrossIcon()"></button>
+    </div>
+    <!--
+  Dialog box content
+-->
+    <div class="rt-dialog-body">
+      <ng-content></ng-content>
+    </div>
+    <!--
+  Footer of the dialog box
+-->
+    <div class="rt-dialog-footer" *ngIf="getShowFooter()">
+      <!-- Close button of the dialog box -->
+      <button class="secondary-btn" (click)="close()" *ngIf="getSecondaryButton()">Close</button>
+      <!-- Save button of the dialog box -->
+      <button class="primary-btn" *ngIf="getPrimaryButton()">Save</button>
+    </div>
+  </div>
+</div>
