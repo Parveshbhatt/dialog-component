@@ -1,0 +1,42 @@
+<div class="rt-sidebar" [ngClass]="toggleStatus ? 'rt-sidebar-pd' : ''">
+  <header class="header" [ngClass]="toggleStatus ? 'rt-sidebar-pd' : ''">
+    <div class="header_toggle">
+      <i class='bx bx-menu' id="header-toggle" (click)="onMenuClick()" [ngClass]="toggleStatus ? 'bx-x' : ''"></i>
+    </div>
+  </header>
+  <div class="l-navbar" [ngClass]="toggleStatus ? 'show' : ''">
+    <nav class="nav">
+      <div>
+        <a href="#" class="nav_logo">
+          <i class='bx bx-layer nav_logo-icon'></i>
+          <span class="nav_logo-name">RT-sidebar</span>
+        </a>
+
+        <ul class="nav_list">
+          <li routerLinkActive="active" *ngFor="let item of sidenavData; let i = index">
+            <a routerLink="{{item.routerLink}} | '' " class="nav_link"
+              [ngClass]="[item.hasOwnProperty('children') ? 'dropdown' : '']"
+              [ngStyle]="{'margin-bottom': item.hasOwnProperty('children') && dropdownShow && item.index===clickIndex? '0.5em' : '1.3rem'}"
+              (click)="onDropdownClick(item)" #dropdownItem>
+              <i class="bx bx-{{item.icon}} nav_icon"></i>
+              <span class="nav_name">{{ item.text }}</span>
+              <i class='bx bxs-chevron-down' [ngStyle]="{'display':toggleStatus?'block':'none'}"
+                *ngIf="item.hasOwnProperty('children')"></i>
+            </a>
+
+            <ul class="dropdown-container" id="homeSubmenu" *ngFor="let childItem of item.children" #dropdownContainer>
+              <li [ngStyle]="{
+                  'display':(item.hasOwnProperty('children') && dropdownShow && childItem.index.toString().startsWith(clickIndex))?'block':'none'
+                }">
+                <a href="#">{{ childItem.text }}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <a href="#" class="nav_link">
+        <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span>
+      </a>
+    </nav>
+  </div>
+</div>

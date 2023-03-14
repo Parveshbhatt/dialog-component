@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RtDialogComponent } from './rt-dialog/rt-dialog.component';
+import { RtSidebarComponent } from './rt-sidebar/rt-sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RtDialogComponent
+    RtDialogComponent,
+    RtSidebarComponent
   ],
   imports: [
     BrowserModule,

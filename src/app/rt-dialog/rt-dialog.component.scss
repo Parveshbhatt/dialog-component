@@ -7,6 +7,7 @@ $btn-hover-color: #131518;
 
 
 .rt-dialog {
+  box-sizing: border-box;
   .rt-dialog-background {
     position: fixed;
     top: 0;
@@ -29,6 +30,7 @@ $btn-hover-color: #131518;
     right: 0;
     width: 550px;
     height: 300px;
+    min-height: 250px;
     box-shadow: 5px 5px 4px rgba(19, 19, 19, 0.2);
     background-color: #fff;
     display: flex;

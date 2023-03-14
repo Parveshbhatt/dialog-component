@@ -1,0 +1,163 @@
+[
+    {
+        "text": "Dashboard",
+        "icon": "grid-alt",
+        "routerLink": "/dashboard"
+    },
+    {
+        "index": 0,
+        "text": "Users",
+        "icon": "user",
+        "routerLink": "/Users",
+        "children": [
+            {
+                "id": 0,
+                "index": 0.1,
+                "text": "Business Owners",
+                "icon": "",
+                "routerLink": "/user-management/business-owners",
+                "children": [
+                    {
+                        "id": 0.1,
+                        "text": "Business 1",
+                        "icon": "",
+                        "routerLink": ""
+                    },
+                    {
+                        "id": 0.1,
+                        "text": "Business 2",
+                        "icon": "",
+                        "routerLink": ""
+                    }
+                ]
+            },
+            {
+                "id": 0,
+                "index": 0.2,
+                "text": "Customers",
+                "icon": "",
+                "routerLink": "/user-management/customers"
+            }
+        ]
+    },
+    {
+        "index": 1,
+        "text": "Business",
+        "icon": "buildings",
+        "routerLink": "/buildings",
+        "children": [
+            {
+                "index": 1.1,
+                "text": "Active Listing",
+                "icon": "",
+                "routerLink": "/business-listing/active-listing"
+            },
+            {
+                "index": 1.2,
+                "text": "Listing Requests",
+                "icon": "",
+                "routerLink": "/business-listing/listing-request"
+            },
+            {
+                "index": 1.3,
+                "text": "Referral",
+                "icon": "",
+                "routerLink": "/business-listing/referral"
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "text": "CMS",
+        "icon": "detail",
+        "routerLink": "/cms",
+        "children": [
+            {
+                "index": 2.1,
+                "text": "Business Categories",
+                "icon": "",
+                "routerLink": "/cms/business-categories"
+            },
+            {
+                "index": 2.2,
+                "text": "Tags/Keywords",
+                "icon": "",
+                "routerLink": "/cms/tags-keywords"
+            },
+            {
+                "index": 2.3,
+                "text": "Banners",
+                "icon": "",
+                "routerLink": "/cms/banner"
+            },
+            {
+                "index": 2.4,
+                "text": "Links",
+                "icon": "",
+                "routerLink": "/cms/links"
+            }
+        ]
+    },
+    {
+        "text": "Reviews",
+        "icon": "paper-plane",
+        "routerLink": "/reviews"
+    },
+    {
+        "index": 3,
+        "text": "Blogs",
+        "icon": "folder-open",
+        "routerLink": "/blogs",
+        "children": [
+            {
+                "index": 3.1,
+                "text": "Published Blogs",
+                "icon": "",
+                "routerLink": "/blogs-management/published-blogs"
+            },
+            {
+                "index": 3.2,
+                "text": "Drafts",
+                "icon": "",
+                "routerLink": "/blogs-management/drafts"
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "text": "Payments",
+        "icon": "credit-card-alt",
+        "routerLink": "/payments",
+        "children": [
+            {
+                "index": 4.1,
+                "text": "Payment Transactions",
+                "icon": "",
+                "routerLink": "/payments/payment-transactions"
+            },
+            {
+                "index": 4.2,
+                "text": "Failed Transactions",
+                "icon": "",
+                "routerLink": "/payments/failed-transactions"
+            },
+            {
+                "index": 4.3,
+                "text": "Payment Plans",
+                "icon": "",
+                "routerLink": "/payments/payment-plans"
+            },
+            {
+                "index": 4.4,
+                "text": "Promo Codes",
+                "icon": "",
+                "routerLink": "/payments/promo-codes"
+            }
+        ]
+    },
+    {
+        "text": "Admin Users",
+        "icon": "book-reader",
+        "routerLink": "/admin-users"
+    }
+]
